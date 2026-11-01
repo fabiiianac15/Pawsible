@@ -1,0 +1,16 @@
+<testsuites id="" name="" tests="6" failures="0" skipped="0" errors="0" time="8.939556">
+<testsuite name="adopcion.spec.ts" timestamp="2026-11-01T16:22:19.661Z" hostname="" tests="6" failures="0" skipped="0" time="4.676" errors="0">
+<testcase name="proceso completo: consultar, solicitar, aprobar y ver la mascota adoptada" classname="adopcion.spec.ts" time="1.741">
+</testcase>
+<testcase name="rechazo: exige motivo, lo muestra en el seguimiento y la mascota sigue disponible" classname="adopcion.spec.ts" time="1.433">
+</testcase>
+<testcase name="si la mascota deja de estar disponible mientras se llena el formulario, la API rechaza la solicitud" classname="adopcion.spec.ts" time="0.619">
+</testcase>
+<testcase name="validación: muestra el error junto al campo y enfoca el primero" classname="adopcion.spec.ts" time="0.332">
+</testcase>
+<testcase name="el panel rechaza una clave incorrecta" classname="adopcion.spec.ts" time="0.228">
+</testcase>
+<testcase name="catálogo en escritorio y teléfono, sin desbordes horizontales" classname="adopcion.spec.ts" time="0.323">
+</testcase>
+</testsuite>
+</testsuites>
