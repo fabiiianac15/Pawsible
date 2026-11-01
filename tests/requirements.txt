@@ -1,0 +1,3 @@
+-r ../services/mascotas/requirements.txt
+-r ../services/adopciones/requirements.txt
+pytest==8.4.0
