@@ -135,4 +135,5 @@ Para probar el sistema desplegado (crea mascotas de prueba cuyo nombre empieza p
 
 ## Integrantes
 
-- Fabian Jose Acosta
+- Fabian Jose Acosta - 0192168
+- Charis Merieth Conrado - 0192205
