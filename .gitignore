@@ -1,0 +1,23 @@
+# Secretos y entorno
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Node
+node_modules/
+dist/
+frontend/test-results/
+frontend/playwright-report/
+
+# Despliegue y herramientas
+.vercel/
+.taste-skill/
+
+# Enunciado del examen
+examen2_SOA.pdf
