@@ -8,9 +8,11 @@ Una mascota nunca queda con dos adopciones aprobadas. Lo garantizan un `UPDATE` 
 
 | Componente | URL |
 | --- | --- |
-| Frontend | Pendiente de despliegue |
-| API de Mascotas (Swagger) | Pendiente de despliegue |
-| API de Adopciones (Swagger) | Pendiente de despliegue |
+| Plataforma web | [pawsible-two.vercel.app](https://pawsible-two.vercel.app) |
+| API de Mascotas (Swagger) | [pawsible-mascotas.vercel.app/docs](https://pawsible-mascotas.vercel.app/docs) |
+| API de Adopciones (Swagger) | [pawsible-adopciones.vercel.app/docs](https://pawsible-adopciones.vercel.app/docs) |
+
+La base de datos está en Supabase. El panel de la fundación (`/panel`) pide la clave `ADMIN_API_KEY`, que no se publica en este repositorio.
 
 ## Arquitectura
 
@@ -113,6 +115,12 @@ scripts/db-local.sh --reset
 (cd frontend && npx playwright install chromium && npx playwright test)
 ```
 
+Para probar el sistema desplegado (crea mascotas de prueba cuyo nombre empieza por `PruebaProd`):
+
+```bash
+(cd frontend && ADMIN_API_KEY=... npx playwright test -c playwright.produccion.config.ts)
+```
+
 ## Desplegar
 
 1. En Supabase, aplica en orden los archivos de `supabase/migrations` desde el editor SQL y asigna las contraseñas:
@@ -122,8 +130,8 @@ scripts/db-local.sh --reset
    ALTER ROLE adopciones_svc PASSWORD '...';
    ```
 
-2. Crea tres proyectos en Vercel con estos directorios raíz: `services/mascotas`, `services/adopciones` y `frontend`.
-3. Configura las variables de cada proyecto según su `.env.example`. `DATABASE_URL` usa el pooler de Supabase en modo transacción (puerto 6543), con usuario `rol.referencia_del_proyecto`. `CORS_ORIGINS` lleva la URL del frontend.
+2. Crea tres proyectos en Vercel, uno por cada directorio: `services/mascotas`, `services/adopciones` y `frontend`. Desde cada uno ejecuta `vercel link` y `vercel deploy --prod`.
+3. Configura las variables de cada proyecto según su `.env.example`. `DATABASE_URL` usa el pooler de Supabase en modo transacción (puerto 6543), con usuario `rol.referencia_del_proyecto`. `CORS_ORIGINS` lleva la URL del frontend. El frontend lee las URL de las APIs al compilar, así que hay que volver a desplegarlo si cambian.
 
 ## Integrantes
 
