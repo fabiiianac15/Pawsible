@@ -1,0 +1,12 @@
+<testsuites id="" name="" tests="4" failures="0" skipped="0" errors="0" time="19.810646999999996">
+<testsuite name="proceso.spec.ts" timestamp="2026-11-01T16:57:38.220Z" hostname="" tests="4" failures="0" skipped="0" time="17.725" errors="0">
+<testcase name="proceso completo en la nube, desde el navegador" classname="proceso.spec.ts" time="9.573">
+</testcase>
+<testcase name="aprobaciones simultáneas en la nube: solo una gana" classname="proceso.spec.ts" time="3.943">
+</testcase>
+<testcase name="Swagger de las dos APIs se muestra con sus operaciones" classname="proceso.spec.ts" time="3.365">
+</testcase>
+<testcase name="la gestión exige clave y CORS solo admite el frontend" classname="proceso.spec.ts" time="0.844">
+</testcase>
+</testsuite>
+</testsuites>
